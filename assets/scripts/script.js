@@ -12,7 +12,7 @@ const checkValue = (element) =>{
     element.id == 'nome' && element.value.length > 1 || 
     element.id == 'tel' && element.value.length >= 8 ||
     element.id == 'service' && element.value != '' ||
-    element.id == 'message' && element.value.length > 10
+    element.id == 'message' && element.value.length > 0
     ){
         let input = document.querySelector(`#container-${element.id}`)
         input.classList.remove('invalid')
@@ -62,5 +62,5 @@ const confirm = (event) =>{
     message.value = ''
     let successMessage = document.querySelector('#aviso')
     successMessage.classList.remove('aviso-closed')
-    setTimeout(()=>successMessage.classList.add('aviso-closed'), 3000)
+    setTimeout(()=>successMessage.classList.add('aviso-closed'), 8000)
 }

@@ -48,7 +48,7 @@ body{
     padding: 0 5px;
     font-size: 1em;
 }
-.input span{
+.input .inputs-placeholder{
     position: absolute;
     top: 15px;
     left: 15px;
@@ -85,7 +85,7 @@ body{
     padding: 15px 8px;
     font-size: 1em;
 }
-.message span{
+.message .inputs-placeholder{
     position: absolute;
     top: 10px;
     left: 10px;
@@ -112,17 +112,17 @@ body{
 animação do texto dos campos input, select e textarea
 //////////////////
 */
-.input input:focus ~ span,
-.input select:focus ~ span,
-.input select:valid ~ span,
-.input input:valid ~ span{
+.input input:focus ~ .inputs-placeholder,
+.input select:focus ~ .inputs-placeholder,
+.input select:valid ~ .inputs-placeholder,
+.input input:valid ~ .inputs-placeholder{
     pointer-events: none;
     color: #5da9db;
     transform: translate(-8px,-1.2em);
     font-size: 70%;
 }
-.message textarea:focus ~ span,
-.message textarea:valid ~ span{
+.message textarea:focus ~ .inputs-placeholder,
+.message textarea:valid ~ .inputs-placeholder{
     pointer-events: none;
     color: #5da9db;
     transform: translate(0,-.8em);
@@ -133,19 +133,19 @@ animação do texto dos campos input, select e textarea
 Estilos caso os inputs sejam validos ou inválidos
 /////////////////////
 */
-.valid input:valid ~ span{
+.valid input:valid ~ .inputs-placeholder{
     color: #1bc94d;
 }
 .valid input{
     border: 2px solid #1bc94d;
 }
-.valid textarea:valid ~ span{
+.valid textarea:valid ~ .inputs-placeholder{
     color: #1bc94d;
 }
 .valid textarea{
     border: 2px solid #1bc94d;
 }
-.valid select:valid ~ span{
+.valid select:valid ~ .inputs-placeholder{
     color: #1bc94d;
 }
 .valid select{
@@ -234,10 +234,10 @@ footer a{
         font-size: 1.5em;
     }
     .input input, 
-    .input span,
+    .input .inputs-placeholder,
     .message textarea,
     .textarea,
-    .message span,
+    .message .inputs-placeholder,
     .submit button{
         font-size: .8em;
     }
