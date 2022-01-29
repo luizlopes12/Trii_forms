@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/form-icon.png">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Trii Form</title>
+</head>
+<body>
+    <div class="aviso-container">
+        <div id="aviso" class="aviso aviso-closed">
+            <p>Pedido enviado com sucesso!</p>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="title">Peça seu orçamento agora mesmo</h2>
+        <form class="form" onsubmit="confirm(event)">
+            <div class="form-inputs">
+                <div class="input" id='container-nome'>
+                    <input type="text" id='nome' required onchange="checkValue(this)">
+                    <span class="inputs-placeholder">Nome</span>
+                    <p class="invalid-alert aviso-closed" id="invalid">Insira um nome válido</p>
+                </div>
+                <div class="input" id='container-email'>
+                    <input type="text" id='email' required onchange="checkValue(this)">
+                    <span class="inputs-placeholder">E-mail</span>
+                    <p class="invalid-alert aviso-closed" id="invalid">Insira um e-mail válido</p>
+                </div>
+            </div>
+            <div class="form-inputs">
+                <div class="input" id='container-tel'>
+                    <input type="tel" id='tel' required onchange="checkValue(this)">
+                    <span class="inputs-placeholder">Telefone</span>
+                    <p class="invalid-alert aviso-closed" id="invalid">Insira um telefone válido</p>
+                </div>
+                <div class="services input" id='container-service'>
+                    <select name="service" id="service" class="select" required onchange="checkValue(this)">
+                        <option></option>
+                        <option value="1">Opção 1</option>
+                        <option value="2">Opção 2</option>
+                        <option value="3">Opção 3</option>
+                        <option value="4">Opção 4</option>
+                        <option value="5">Opção 5</option>
+                    </select>
+                    <span class="inputs-placeholder">Escolha o serviço que deseja</span>
+                    <p class="invalid-alert aviso-closed" id="invalid">Insira um serviço válido</p>
+                </div>
+            </div>
+            <div class="form-inputs">
+                <div class="message" id='container-message'>
+                    <textarea name="message" id="message" cols="90" rows="6" class="textarea" required onchange="checkValue(this)"></textarea>
+                    <span class="inputs-placeholder">Mensagem</span>
+                    <p class="invalid-alert aviso-closed" id="invalid">Insira uma mensagem maior que 10 caracteres</p>
+                </div>
+                </div>
+                <div class="submit btn-invalid" id="btn-enviar">
+                    <button type="submit">Enviar</button>
+                </div>
+        </form>
+    </div>
+    <footer>Feito com ❤️ por <a href="https://github.com/luizlopes12">Luiz Lopes</a></footer>
+</body>
+<script src="./assets/scripts/script.js"></script>
+</html>

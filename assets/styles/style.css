@@ -1,0 +1,288 @@
+
+/* Import da fonte Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #9ddeff;
+}
+.container{
+    width: 60%;
+    margin: 70px auto;
+    padding: 50px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 25px -8px rgba(0,0,0,0.6);
+}
+.title{
+    color: rgb(80, 80, 80);
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+.form{
+    width: 80%;
+    margin: auto;
+}
+.form-inputs{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.input{
+    width: 48%;
+    height: 50px;
+    margin: 4px 0;
+    position: relative;
+}
+.input input, .input select{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e8e8e8;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 5px;
+    font-size: 1em;
+}
+.input span{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #6f6f6f;
+    font-size: 1em;
+    transition: all .3s;
+    pointer-events: none;
+}
+.input input:focus, .input select:focus{
+    border: 2px solid #5da9db;
+}
+.select {
+    appearance: none;
+    width: 100%;
+    width: 300px;
+    height: 50px;
+    position: relative;
+    background: #ffffff url('../img/icon-down.svg') 95.5% 50% no-repeat;
+    outline: none;
+  }
+.select:focus {
+    border: 2px solid #64abdb;
+  }
+.message{
+    width: 100%;
+    position: relative;
+}
+.message textarea{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e8e8e8;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px 8px;
+    font-size: 1em;
+}
+.message span{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #6f6f6f;
+    font-size: 1em;
+    transition: all .3s;
+    pointer-events: none;
+}
+.textarea{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e8e8e8;
+    border-radius: 5px;
+    resize: none;
+    padding: 10px;
+    font-size: 1em;
+}
+.textarea:focus{
+    outline: none;
+    border: 2px solid #64abdb;
+}
+/*
+//////////////////
+animação do texto dos campos input, select e textarea
+//////////////////
+*/
+.input input:focus ~ span,
+.input select:focus ~ span,
+.input select:valid ~ span,
+.input input:valid ~ span{
+    pointer-events: none;
+    color: #5da9db;
+    transform: translate(-8px,-1.2em);
+    font-size: 70%;
+}
+.message textarea:focus ~ span,
+.message textarea:valid ~ span{
+    pointer-events: none;
+    color: #5da9db;
+    transform: translate(0,-.8em);
+    font-size: 70%;
+}
+/*
+//////////////////////
+Estilos caso os inputs sejam validos ou inválidos
+/////////////////////
+*/
+.valid input:valid ~ span{
+    color: #1bc94d;
+}
+.valid input{
+    border: 2px solid #1bc94d;
+}
+.valid textarea:valid ~ span{
+    color: #1bc94d;
+}
+.valid textarea{
+    border: 2px solid #1bc94d;
+}
+.valid select:valid ~ span{
+    color: #1bc94d;
+}
+.valid select{
+    border: 2px solid #1bc94d;
+}
+.invalid input:not(:focus) ~ .inputs-placeholder{
+    color: #c91b1b;
+}
+.invalid input{
+    border: 2px solid #c91b1b;
+}
+.invalid textarea{
+    border: 2px solid #c91b1b;
+}
+/*
+/////////////////
+Estilos do botão submit
+/////////////////
+*/
+.submit{
+    width: 100%;
+    display: flex;
+    margin: 10px 0;
+    justify-content: end;
+}
+.submit button{
+    width: 110px;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -8px rgba(0,0,0,0.6);
+}
+.btn-invalid button{
+    background-color: #797979;
+}
+.btn-valid button{
+    cursor: pointer;
+    background-color: #0175c0;
+}
+.invalid-alert{
+    font-size: .7em;
+    margin: 0 1px;
+    color: #c91b1b;
+}
+/*
+//////////////////////////////////////
+Estilo do aviso que o form foi enviado
+//////////////////////////////////////
+*/
+.aviso-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.aviso{
+    width: 250px;
+    visibility: visible;
+    opacity: 1;
+    font-size: 1em;
+    position: absolute;
+    margin-top: 50px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    text-align: center;
+    background-color: rgb(109, 228, 109);
+    transition: all .2s ease-in-out;
+}
+.aviso-closed{
+    opacity: 0;
+}
+footer{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+footer a{
+    color: rgb(51, 51, 51);
+}
+@media(max-width: 1150px){
+    .title{
+        font-size: 1.5em;
+    }
+    .input input, 
+    .input span,
+    .message textarea,
+    .textarea,
+    .message span,
+    .submit button{
+        font-size: .8em;
+    }
+    .input select{
+        font-size: .7em;
+    }
+}
+@media(max-width: 960px){
+    .container{
+        width: 90%;
+    }
+}
+@media(max-width: 650px){
+    .container{
+        width: 95%;
+        margin: 15px auto;
+        padding: 25px 10px; 
+    }
+    .form{
+        width: 100%;
+        margin: auto;
+    }
+    .form-inputs{
+        display: block;
+    }
+    .input{
+        width: 90%;
+        margin: 15px auto;
+        height: 50px;
+        position: relative;
+    }
+    .message{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .submit{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .submit button{
+        width: 100%;
+    }
+    .aviso{
+        margin-top: 10px;
+    }
+}
+
+
