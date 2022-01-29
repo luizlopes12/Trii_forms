@@ -2,7 +2,7 @@
  Desafio proposto para estágiario front end na Trii em html, css e javascript
 
 ### Link
-    https://luizlopes12.github.io/Trii_forms/
+   Site: https://luizlopes12.github.io/Trii_forms/
     
 ### Screenshots
 ![mob1](./mob1.png)
