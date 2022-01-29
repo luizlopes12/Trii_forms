@@ -8,6 +8,6 @@
 ![mob1](./mob1.png)
 ![mob2](./mob2.png)
 
-![Desk1](./desk1.png)
-![Desk1](./desk2.png)
+![Desk1](./Desk1.png)
+![Desk1](./Desk2.png)
 
