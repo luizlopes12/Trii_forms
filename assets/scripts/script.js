@@ -55,8 +55,8 @@ const confirm = (event) =>{
     let tel = document.querySelector('#tel')
     let service = document.querySelector('#service')
     let message = document.querySelector('#message')
-    email.value = ''
     nome.value = ''
+    email.value = ''
     tel.value = ''
     service.value = ''
     message.value = ''
