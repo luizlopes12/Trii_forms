@@ -62,5 +62,5 @@ const confirm = (event) =>{
     message.value = ''
     let successMessage = document.querySelector('#aviso')
     successMessage.classList.remove('aviso-closed')
-    setTimeout(()=>successMessage.classList.add('aviso-closed'), 8000)
+    setTimeout(()=>successMessage.classList.add('aviso-closed'), 3000)
 }
